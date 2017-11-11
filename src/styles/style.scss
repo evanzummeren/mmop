@@ -1,0 +1,258 @@
+@import 'spinner';
+
+$backgroundcolor: black;
+$overallPadding: 100px;
+
+@font-face {
+  font-family: 'ffdin';
+  src: url('http://localhost:8080/ffdin.eot'); /* IE9 Compat Modes */
+  src: url('http://localhost:8080/ffdin.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('http://localhost:8080/ffdin.woff2') format('woff2'), /* Super Modern Browsers */
+       url('http://localhost:8080/ffdin.woff') format('woff'), /* Pretty Modern Browsers */
+       url('http://localhost:8080/ffdin.ttf') format('ttf'), /* Pretty Modern Browsers */
+}
+
+body {
+	background: $backgroundcolor;
+	padding: 0;
+	margin: 0;
+}
+
+/*.progress__container {
+	width: 30px;
+	height: 100%;
+	z-index: 100;
+	position: absolute;
+	display: block;
+	background: pink;
+	top: 0;
+	left: 0;
+}*/
+
+/* Header */
+
+#video-background {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  transform: translate(-50%, -50%);
+}
+
+.intro__container {
+	height: 100vh;
+  vertical-align: middle;
+  display: table-cell;
+  padding-left: 100px;
+}
+
+.intro__heading {
+	font-family: 'ffdin';
+	font-size: 44px;
+	color: #333;
+	/*float: left;*/
+	/*margin-top: 100px;*/
+	/*white-space: pre*/
+}
+
+.intro__lead, .intro__credits {
+	font-family: 'ffdin';
+	font-size: 20px;
+	color: #868686;
+	width: 50%;
+	margin-top: 0px;
+}
+
+.intro__credits { font-size: 18px !important;}
+
+
+
+/* Adding CSS manually is only necessary in JSFiddle,
+   where CSS can't be inserted into the <head> */
+.typed-cursor{
+  opacity: 1;
+  font-size: 44px;
+	font-family: 'ffdin';
+	color: #333;
+  animation: typedjsBlink 1s infinite;
+  -webkit-animation: typedjsBlink 1s infinite;
+  animation: typedjsBlink 1s infinite;
+}
+@keyframes typedjsBlink{
+  50% { opacity: 0.0; }
+}
+@-webkit-keyframes typedjsBlink{
+  0% { opacity: 1; }
+  50% { opacity: 0.0; }
+  100% { opacity: 1; }
+}
+.typed-fade-out{
+  opacity: 0;
+  transition: opacity .25s;
+  -webkit-animation: 0;
+  animation: 0;
+}
+
+/* Block general design */
+.block__generalmarkup {
+	text-align: justify;
+	padding-left: 30%;
+	padding-right: 30%;
+}
+
+.block__heading--smallcaps {
+	font-size: 16px;
+}
+
+.block__video {
+	width: 100%;
+}
+
+/* Chapter header */
+.imagecontainer {
+	  position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.chapter__heading {
+  position: absolute;
+  width: 50%;
+  text-align: center;
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.chapter__number {
+	font-size: 180px !important;
+}
+
+h2, .chapter__number {
+	font-family: 'ffdin';
+	font-size: 48px;
+	color: white;
+	margin-top: -20px;
+	position: relative;
+	  /*filter: blur(20px);*/
+}
+
+/* Block 1 */
+#dropcap {
+    float: left;
+    padding: 0px;
+    font-size: 60px;
+    line-height: 0px;
+    margin-top: 25px;
+    height: 20px;
+}
+.block__container {
+	background-color: #F2F2F2;
+	border: 20px solid white;
+}
+
+.block1 {
+	padding-top: 100px;
+}
+
+.block__text {
+	font-family: 'ffdin';
+	font-size: 20px;
+	color: #333333;
+	margin-top: 0px;
+	margin: auto;
+}
+
+.block__fbmsgs {
+	margin-top: 30px;
+}
+
+.block__fbmsgcontainer {
+	width: 100%;
+	display: inline-block;
+}
+
+.block__fbmsg--right {
+	font-family: 'ffdin';
+	font-size: 20px;
+	float: right;
+	padding: 5px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 15px;
+	background: #0080fb;
+	max-width: 75%;
+	color: white;
+	margin-top:10px;
+	opacity: 0;
+}
+
+.block__fbmsg--left {
+	font-family: 'ffdin';
+	font-size: 20px;
+	float: left;
+	padding: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 15px;
+	background: #dadada;
+	max-width: 75%;
+	color: #2b2b2b;
+	margin-top:10px;
+	transition: all .5s linear;
+	opacity: 0;
+	min-width: 70px;
+}
+
+
+.block__fbmsg--text {
+	opacity: 0;
+	display: none;
+}
+
+/* Block 2 */
+
+
+.block2 {
+	padding-top: 50px;
+}
+
+/* Single Facebook post styling */
+.facebook__post {
+  border: 1px solid #dddfe2;
+	padding: 12px 12px 12px 12px;
+	background: white;
+	border-radius: 3px;
+	font-family: 'ffdin';
+	font-size: 16px;
+	opacity: 0;
+}
+
+.facebook__postusername {
+	color: #365899;
+	opacity: 0;
+}
+
+.facebook__postdate {
+	color: #90949c;
+	font-size: 14px;
+	opacity: 0;
+}
+
+.facebook__postcontent {
+	opacity: 0;
+}
+
+/* Groepen lijst */
+.list {
+	font-family: 'ffdin';
+}
+
+ul {
+  list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
